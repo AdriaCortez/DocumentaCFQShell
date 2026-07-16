@@ -1,0 +1,72 @@
+{{ANALISE_GLOBAL}}
+
+{{CONTEXTO_GLOBAL}}
+
+=== ARQUIVO A ANALISAR ===
+Caminho: {{CAMINHO_ARQUIVO}}
+Tipo: Página
+Linguagem: {{LINGUAGEM}}
+Importa de: {{IMPORTS}}
+Exporta: {{EXPORTS}}
+
+{{REFERENCIAS_CRUZADAS}}
+
+Código:
+```{{LINGUAGEM}}
+{{CONTEUDO_ARQUIVO}}
+```
+
+Analise esta PÁGINA e responda EXATAMENTE no formato:
+
+### {{NOME_PAGINA}}
+
+**Rota:** [caminho da rota]
+**Módulo:** [nome do módulo a que pertence]
+**Objetivo Principal:** [descrição detalhada do propósito da página e funcionalidades principais]
+
+#### Metodologia de Levantamento
+- Fonte de evidência: Análise estática do código fonte deste arquivo
+- Comportamento confirmado vs inferido: distinção explícita — trechos inferidos marcados com [A VALIDAR]
+
+#### Perfis de Usuário
+- **Nome do perfil**: Acesso: [descrição] — Permissões: [lista] — Comportamento: [descrição]
+
+#### Componentes da Interface
+- [componente 1]: [propósito]
+- [componente 2]: [propósito]
+
+#### Fluxos Principais
+1. [passo 1]
+2. [passo 2]
+
+#### Regras de Negócio
+Extraia as regras de negócio IMPLEMENTADAS nesta página, com rastreabilidade:
+
+- **RN001** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+- **RN002** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+
+Se alguma regra parecer divergente do esperado ou tiver comportamento não óbvio, marque com [A VALIDAR] ou [Possível bug/gap].
+
+#### Validações
+**Frontend:** [validações no cliente]
+**Backend:** [validações no servidor]
+
+#### Estados da Aplicação
+**Carregamento:** [o que ocorre durante carregamento]
+**Sucesso:** [o que ocorre em caso de sucesso]
+**Erro:** [o que ocorre em caso de erro]
+
+#### Rastreabilidade de Código
+Para cada funcionalidade principal identificada:
+- Trecho de código: {{CAMINHO_ARQUIVO}}:[linha]
+- Comportamento observado: [descrição]
+- Requisito inferido: [identificador — ex: RF001, RNF001]
+
+#### Integrações
+- [API ou serviço integrado]
+
+#### Mensagens e Feedback
+[texto descritivo sobre feedback ao usuário]
+
+#### Segurança e Auditoria
+[aspectos de segurança, autenticação, autorização, logging relevantes]

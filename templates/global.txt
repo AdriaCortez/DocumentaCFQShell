@@ -1,0 +1,461 @@
+=== ESTRUTURA COMPLETA DO PROJETO ===
+Nome: {{NOME_PROJETO}}
+
+Árvore de arquivos:
+{{ARVORE_ARQUIVOS}}
+
+Dependências e imports por arquivo:
+{{IMPORTS_EXPORTS}}
+
+=== CONTEÚDO DOS ARQUIVOS PRINCIPAIS ===
+{{CONTEUDO_PRINCIPAL}}
+
+=== REGRAS GLOBAIS DE CLASSIFICAÇÃO ===
+
+TODA afirmação feita abaixo DEVE receber UMA das seguintes marcações:
+
+  [FATO]       — Confirmado diretamente por evidência no código (cite arquivo:linha)
+  [A VALIDAR]  — Plausível com base no código analisado, mas requer confirmação com stakeholder
+  [INFERÊNCIA] — Deduzido indiretamente a partir de padrões, nomes ou convenções observadas
+
+Além disso, para cada conclusão arquitetural, cite as evidências (arquivos, imports, chamadas de função) que a sustentam.
+
+SEÇÕES CONDICIONAIS:
+- "Estrutura da API": incluir APENAS se houver backend (controllers, rotas HTTP, services de servidor). Caso contrário, omitir a seção inteira.
+- "Estrutura da Interface": incluir APENAS se houver frontend React, Vue ou Angular (componentes, hooks, stores). Caso contrário, omitir a seção inteira.
+
+IMPORTANTE — Para identificar o Padrão Arquitetural:
+- Analise a separação REAL de responsabilidades entre os arquivos
+- NÃO classifique como MVC apenas por ver pastas com nomes como "routes", "services" ou "pages"
+- Verifique se existe separação clara entre Model (dados/persistência), View (apresentação/UI) e Controller (lógica de requisições)
+- Se o backend mistura rotas, modelos e lógica no mesmo arquivo, NÃO é MVC
+- Se o frontend usa React com services que misturam lógica e UI, NÃO é MVC
+
+Analise este projeto como um todo e responda EXATAMENTE no formato abaixo.
+
+### Metodologia de Levantamento
+
+**Fontes de Evidência:** Código fonte (análise estática), estrutura de diretórios, imports/exports, arquivos de configuração, conteúdo dos arquivos principais.
+**Versão/Commit de Referência:** [se identificável no código — senão "Não identificado"]
+**Distinção Fato vs Inferência:** Toda afirmação neste documento está classificada como [FATO], [A VALIDAR] ou [INFERÊNCIA]. Comportamentos confirmados por código recebem [FATO] com rastreabilidade (arquivo:linha). Inferências e suposições estão explicitamente marcadas.
+
+### Sumário Executivo
+
+**O que é o sistema:** [1-2 parágrafos — descrição concisa do propósito e funcionalidades principais] [FATO]
+**Público-alvo:** [usuários ou sistemas que consomem este software] [FATO]/[INFERÊNCIA]
+**Tecnologias principais:** [lista resumida das tecnologias-core — ex: "Node.js + Express + MongoDB"] [FATO]
+**Estado geral de saúde:** [avaliação com base em métricas, testes, débito técnico — ex: "Produção, com débito técnico moderado"] [INFERÊNCIA]
+**Riscos críticos identificados:** [2-4 riscos mais relevantes — ex: "Sem cobertura de testes", "Senhas em plain text"] [FATO]/[A VALIDAR]
+
+### Visão Geral
+
+**Tipo de Projeto:** [ex: API REST, aplicação web, biblioteca, CLI, monorepo, microsserviço, etc.] [FATO]
+**Propósito Principal:** [descrição concisa do que o projeto faz] [FATO]
+
+### Arquitetura
+
+**Estilo Arquitetural:** [analise a estrutura real: Monolítico, Microsserviços, Camadas, MVC, Clean Architecture, Hexagonal, Component-based, Event-driven, etc.] [FATO]
+**Justificativa:** [1-2 frases explicando POR QUE este estilo se aplica, com evidência] [FATO]
+
+### Organização
+
+**Critério de Agrupamento:** [Feature-based, Layer-based, Domain-based, Híbrido — como os arquivos estão organizados] [FATO]
+**Justificativa:** [1-2 frases com evidência — ex: "Pastas agrupadas por funcionalidade (users/, orders/, products/) indicam Feature-based"] [FATO]
+
+### Evidências Arquiteturais
+
+Para cada conclusão arquitetural, cite as evidências encontradas no código:
+
+- O sistema **segue** [padrão/característica X] porque:
+    - [evidência 1 — ex: "app/routes chamam services (arquivo:linha)"] [FATO]
+    - [evidência 2] [FATO]
+    - [evidência 3] [FATO]
+
+- O sistema **NÃO segue** [padrão/característica Y] porque:
+    - [evidência 1 — ex: "controllers acessam diretamente o banco (arquivo:linha)"] [FATO]
+    - [evidência 2] [FATO]
+
+(Inclua pelo menos 2 conclusões para cada direção — segue/não segue — se aplicável)
+
+### Arquitetura "As-Is"
+
+Descreva como o sistema REALMENTE está estruturado hoje, incluindo suas imperfeições:
+
+**Estrutura de Camadas/Módulos Real:**
+- [camada/módulo 1]: [responsabilidade real observada no código] [FATO]
+- [camada/módulo 2]: [responsabilidade real observada no código] [FATO]
+
+**Diagrama da Arquitetura Atual:**
+[descreva textualmente o fluxo de dados e controle entre os componentes, como realmente ocorre no código]
+
+#### Débito Técnico Mapeado
+
+Liste o que existe mas não deveria:
+- [problema 1]: [descrição — ex: código morto, duplicação, dependências desatualizadas, acoplamento indevido] [FATO]/[A VALIDAR]
+- [problema 2]: [descrição] [FATO]/[A VALIDAR]
+
+#### Divergências Entre Código e Comportamento Esperado
+
+Pontos onde o sistema faz algo diferente do que a lógica de negócio sugere:
+- [divergência 1]: [descrição — ex: função X retorna vazio quando deveria retornar erro] [FATO]/[A VALIDAR]
+
+### Modelo de Domínio
+
+**Entidades encontradas:**
+- **[NomeEntidade1]:** [descrição — propósito no domínio, arquivo(s) onde é definida] [FATO]
+- **[NomeEntidade2]:** [descrição — propósito no domínio, arquivo(s) onde é definida] [FATO]
+
+**Relacionamentos:**
+```
+[NomeEntidade1]
+    |
+    | [cardinalidade — ex: 1:N]
+    |
+[NomeEntidade2]
+    |
+    | [cardinalidade — ex: N:1]
+    |
+[NomeEntidade3]
+```
+[FATO]/[INFERÊNCIA]
+
+### Persistência
+
+**Bancos identificados:**
+- [banco 1]: [tipo — ex: MongoDB, PostgreSQL, SQLite, Redis] — [para que é usado] [FATO]
+
+**Coleções/Tabelas:**
+- [nome_tabela1]: [propósito] [FATO]/[INFERÊNCIA]
+- [nome_tabela2]: [propósito] [FATO]/[INFERÊNCIA]
+
+**Relacionamentos entre tabelas/coleções:**
+- [tabela A] → [tabela B]: [tipo — ex: 1:N, N:M, referência por ID] [FATO]/[INFERÊNCIA]
+
+### Dependências entre Módulos
+
+Grafo de dependências entre os principais módulos do sistema:
+
+```
+[Módulo 1]
+    ↓
+[Módulo 2]
+    ↓
+[Módulo 3]
+    ↓
+[Módulo 4]
+```
+
+[FATO]/[INFERÊNCIA]
+
+**Descrição das dependências:**
+- [módulo X] → [módulo Y]: [tipo de dependência — ex: importa, chama API, estende] [FATO]
+
+### Inventário Técnico Real
+
+#### Tecnologias Identificadas
+- [tecnologia 1]: [para que é usada] — [versão, se identificável] [FATO]
+- [tecnologia 2]: [para que é usada] — [versão, se identificável] [FATO]
+
+#### Dependências e Bibliotecas
+- [dependência 1]: [versão, se identificável] — [para que serve] — [licença, se identificável] [FATO]
+- [dependência 2]: [versão, se identificável] — [para que serve] — [licença, se identificável] [FATO]
+
+#### Endpoints Reais da API
+Extraídos do código, não idealizados:
+- [MÉTODO] [caminho]: [arquivo:linha] — [propósito identificado] [FATO]
+- [MÉTODO] [caminho]: [arquivo:linha] — [propósito identificado] [FATO]
+
+#### Variáveis de Ambiente e Configurações
+O que precisa estar configurado para o sistema rodar:
+- [NOME_VAR]: [valor padrão ou exemplo] — [propósito] — [obrigatória/opcional] [FATO]
+
+#### Mapa de Permissões e Controle de Acesso
+Como está implementado de fato:
+- [papel/perfil]: [o que pode fazer] — [arquivo:linha onde a regra é aplicada] [FATO]
+- [papel/perfil]: [o que pode fazer] — [arquivo:linha onde a regra é aplicada] [FATO]
+
+### Estrutura da API
+
+INCLUIR APENAS SE O PROJETO CONTÉM BACKEND (controllers, rotas HTTP, services de servidor). Caso contrário, omitir esta seção inteira.
+
+**Controllers:**
+- [controller 1]: [responsabilidade] — [arquivo:linha] [FATO]
+
+**Middlewares:**
+- [middleware 1]: [função — ex: autenticação, logging, rate limiting] — [arquivo:linha] [FATO]
+
+**Services:**
+- [service 1]: [responsabilidade] — [arquivo:linha] [FATO]
+
+**Repositories/DAOs:**
+- [repository 1]: [entidade que gerencia] — [arquivo:linha] [FATO]
+
+**Models/Schemas:**
+- [model 1]: [entidade representada] — [arquivo:linha] [FATO]
+
+**Validações:**
+- [validação 1]: [onde é aplicada, o que valida] — [arquivo:linha] [FATO]
+
+**DTOs/Serializers:**
+- [dto 1]: [propósito] — [arquivo:linha] [FATO]
+
+**Autenticação/Autorização:**
+- [mecanismo]: [como está implementado — ex: JWT, OAuth2, sessão] — [arquivo:linha] [FATO]/[A VALIDAR]
+
+**Jobs/Cron/Filas/WebSockets:**
+- [mecanismo]: [tipo e propósito] — [arquivo:linha] [FATO]
+
+Se algum item não for identificado, escreva "Não identificado" para esse item específico.
+
+### Estrutura da Interface
+
+INCLUIR APENAS SE O PROJETO CONTÉM FRONTEND React, Vue ou Angular (componentes, hooks, stores). Caso contrário, omitir esta seção inteira.
+
+**Rotas:**
+- [rota 1]: [componente/página associada] [FATO]
+- [rota 2]: [componente/página associada] [FATO]
+
+**Componentes Principais:**
+- [componente 1]: [propósito] — [arquivo:linha] [FATO]
+- [componente 2]: [propósito] — [arquivo:linha] [FATO]
+
+**Hooks/Composables:**
+- [hook 1]: [propósito] — [arquivo:linha] [FATO]
+
+**Contextos/Stores/Estado Global:**
+- [store 1]: [o que gerencia] — [arquivo:linha] [FATO]
+
+**Fluxo de Navegação:**
+[descrição textual do fluxo de navegação entre páginas/rotas] [FATO]/[INFERÊNCIA]
+
+**Lazy Loading:**
+[se há carregamento sob demanda de componentes/rotas] [FATO]
+
+**Layouts:**
+- [layout 1]: [onde é aplicado] — [arquivo:linha] [FATO]
+
+Se algum item não for identificado, escreva "Não identificado" para esse item específico.
+
+### Requisitos Funcionais
+
+Requisitos extraídos do comportamento observado no código:
+
+- **RF001** — [descrição do requisito funcional] — Rastreabilidade: [arquivo:linha] [FATO]
+- **RF002** — [descrição do requisito funcional] — Rastreabilidade: [arquivo:linha] [FATO]
+- **RF003** — [descrição do requisito funcional] — Rastreabilidade: [arquivo:linha] [A VALIDAR]
+
+Baseie-se APENAS no que o código implementa. Não invente funcionalidades que não existem. Se o código não evidenciar o requisito completo, marque como [A VALIDAR].
+
+### Requisitos Não Funcionais
+
+Requisitos não funcionais extraídos da implementação observada, categorizados por subcaracterística ISO 25010:
+
+**Adequação Funcional:**
+- **RNF001** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+**Confiabilidade:**
+- **RNF002** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+**Eficiência de Desempenho:**
+- **RNF003** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+**Usabilidade:**
+- **RNF004** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+**Segurança:**
+- **RNF005** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+**Manutenibilidade:**
+- **RNF006** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+**Portabilidade:**
+- **RNF007** — [descrição] — Rastreabilidade: [arquivo:linha] [FATO]
+
+Se uma categoria não tiver requisitos identificados no código, escreva "Nenhum identificado" para essa categoria específica.
+
+### Regras de Negócio
+
+Regras de negócio agregadas de todo o projeto, extraídas diretamente do código:
+
+- **RN001** — Identificada em [arquivo:linha]: [descrição da regra] [FATO]
+- **RN002** — Identificada em [arquivo:linha]: [descrição da regra] [FATO]
+- **RN003** — Identificada em [arquivo:linha]: [descrição da regra] [A VALIDAR]
+
+Se alguma regra parecer divergente do esperado ou tiver comportamento não óbvio, marque com [A VALIDAR] ou [Possível bug/gap]. Se não houver regras de negócio identificáveis, escreva "Nenhuma regra de negócio identificada no código."
+
+### Matriz de Rastreabilidade
+
+Tabela que relaciona requisitos, funcionalidades implementadas, regras de negócio e testes:
+
+| Requisito | Funcionalidade | Arquivo:Linha | Regra de Negócio | Teste Associado |
+|-----------|---------------|---------------|------------------|-----------------|
+| RF001 | [descrição da funcionalidade] | [arquivo:linha] | RN001 | [arquivo de teste, se houver] |
+| RF002 | [descrição da funcionalidade] | [arquivo:linha] | RN002 | [arquivo de teste, se houver] |
+| RNF001 | [descrição da funcionalidade] | [arquivo:linha] | — | [arquivo de teste, se houver] |
+
+[FATO]/[A VALIDAR]
+
+Preencha APENAS com dados extraídos do código. Se não houver testes associados, escreva "Nenhum".
+
+### Fluxos Principais
+
+Identifique os fluxos mais importantes do sistema:
+
+#### Fluxo 1: [nome do fluxo]
+1. [etapa 1] — [arquivo:função responsável] [FATO]
+2. [etapa 2] — [arquivo:função responsável] [FATO]
+3. [etapa 3] — [arquivo:função responsável] [FATO]
+
+#### Fluxo 2: [nome do fluxo]
+1. [etapa 1] — [arquivo:função responsável] [FATO]
+2. [etapa 2] — [arquivo:função responsável] [FATO]
+3. [etapa 3] — [arquivo:função responsável] [FATO]
+
+### Métricas
+
+Métricas estimadas com base na árvore de arquivos e conteúdo analisado:
+
+**Contagens:**
+- Total de arquivos: [número estimado] [FATO]
+- Total de linhas (estimado): [número estimado] [INFERÊNCIA]
+- Componentes: [número] [FATO]
+- Controllers: [número] [FATO]
+- Services: [número] [FATO]
+- Repositories/DAOs: [número] [FATO]
+- Models/Schemas: [número] [FATO]
+- Rotas: [número] [FATO]
+- Middlewares: [número] [FATO]
+
+**Arquivos grandes (mais de 500 linhas):**
+- [arquivo 1]: [número de linhas] [FATO]
+- [arquivo 2]: [número de linhas] [FATO]
+(Se nenhum, escreva "Nenhum arquivo com mais de 500 linhas identificado")
+
+**Funções grandes (mais de 100 linhas):**
+- [função 1]: [arquivo:linha] — [número de linhas] [FATO]
+- [função 2]: [arquivo:linha] — [número de linhas] [FATO]
+(Se nenhuma, escreva "Nenhuma função com mais de 100 linhas identificada")
+
+**Arquivos altamente acoplados:**
+- [arquivo 1]: [número de imports/dependências] — [justificativa] [FATO]/[INFERÊNCIA]
+- [arquivo 2]: [número de imports/dependências] — [justificativa] [FATO]/[INFERÊNCIA]
+(Se nenhum, escreva "Nenhum arquivo com acoplamento excessivo identificado")
+
+### Testabilidade
+
+**Frameworks de teste identificados:**
+- [framework 1]: [arquivo de configuração ou import que evidencia — ex: jest.config.js, vitest.config.ts, pytest.ini] [FATO]
+- Se nenhum framework identificado, escreva "Nenhum framework de teste identificado"
+
+**Arquivos de teste encontrados:**
+- [arquivo 1]: [tipo — ex: unitário, integração, e2e] [FATO]
+(Se nenhum, escreva "Nenhum arquivo de teste encontrado")
+
+**Cobertura observada:**
+- [avaliação qualitativa — ex: "Baixa: apenas 2 arquivos de teste para 45 arquivos de produção", "Média: ~40% dos módulos principais têm testes"] [FATO]/[INFERÊNCIA]
+
+**Módulos sem testes:**
+- [módulo 1]: [arquivos que o compõem sem cobertura] [FATO]
+- [módulo 2]: [arquivos que o compõem sem cobertura] [FATO]
+(Se todos os módulos tiverem testes, escreva "Todos os módulos principais possuem cobertura de testes")
+
+### Checklist de Segurança
+
+Verificação de práticas de segurança observadas no código:
+
+| Item | Status | Evidência |
+|------|--------|-----------|
+| SQL Injection | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| NoSQL Injection | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| XSS | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| CSRF | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| CORS configurado | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| JWT/OAuth | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Cookies HttpOnly | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Cookies Secure | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Rate Limit | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Helmet/Security Headers | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| CSP (Content Security Policy) | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Sanitização de inputs | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Validação de inputs | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Senhas hasheadas | ☐/☑ | [arquivo:linha ou justificativa] [FATO] |
+| Logs sem dados sensíveis | ☐/☑ | [arquivo:linha ou justificativa] [A VALIDAR] |
+
+☐ = Não identificado / Ausente — ☑ = Presente
+
+Itens que não se aplicam ao tipo de projeto (ex: Cookies HttpOnly em uma CLI) devem ser marcados como "Não se aplica" no campo de Status.
+
+### Inventário de Arquivos Relevantes
+
+Documente apenas arquivos que participam diretamente dos fluxos principais ou da arquitetura. NÃO liste todos os arquivos do projeto.
+
+- **Controllers:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+- **Services:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+- **Models/Schemas:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+- **Rotas:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+- **Componentes principais:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+- **Configurações:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+- **Entrypoints:**
+    - [arquivo]: [papel — 1 frase] [FATO]
+
+Se uma categoria não existir no projeto, omita essa categoria.
+
+### Padrões e Convenções Observadas
+
+- [padrão 1]: [onde é usado e em quais arquivos] [FATO]
+- [padrão 2]: [onde é usado e em quais arquivos] [FATO]
+
+### Gap Analysis Normativo
+
+Comparativo entre o que está implementado e o que as normas exigem. Analise o código em busca de evidências de conformidade ou ausência:
+
+| Norma | Exigência | Situação Atual | GAP |
+|-------|----------|---------------|-----|
+| ABNT ISO/IEC/IEEE 12207 | Processos de ciclo de vida documentados | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ABNT ISO/IEC/IEEE 15288 | Processos de ciclo de vida de sistemas | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Adequação Funcional | Funcionalidades cobrem requisitos declarados | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Confiabilidade | Tratamento de falhas, tolerância a erros | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Eficiência | Uso de recursos, tempo de resposta | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Usabilidade | Feedback ao usuário, prevenção de erros | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Segurança | Autenticação, autorização, criptografia | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Manutenibilidade | Modularização, coesão, documentação interna | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| ISO 25010 — Portabilidade | Adaptabilidade a diferentes ambientes | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| e-MAG 3.1 | Acessibilidade: navegação por teclado, contraste, ARIA | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| LGPD — Consentimento | Coleta de dados com consentimento explícito | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| LGPD — Mascaramento | Dados pessoais mascarados em logs e respostas | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+| LGPD — Exclusão | Direito de exclusão de dados do titular | [situação encontrada no código] | [Atende/Parcial/Pendente] |
+
+Para cada linha da tabela, baseie-se APENAS no que o código evidencia. Se não houver indícios no código, marque como "Não identificado" na situação atual e "Pendente" no GAP.
+
+### Terminologia Legada
+
+Glossário de inconsistências de nomenclatura encontradas no código:
+
+- **[termo encontrado]:** usado em [arquivo:linha] — recomendação: [termo padronizado sugerido] [FATO]
+- **[termo encontrado]:** usado em [arquivo:linha] — recomendação: [termo padronizado sugerido] [FATO]
+
+Inclua apenas inconsistências REAIS identificadas (nomes ambíguos, incorretos, inconsistentes entre arquivos). Se não houver, escreva "Nenhuma inconsistência identificada."
+
+### Roadmap
+
+Sugestões priorizadas de melhorias com base nos problemas, débitos e gaps identificados neste documento:
+
+**[Prioridade Alta]**
+- [ação 1]: [o que fazer] — Justificativa: [evidência do débito/gap que motiva esta ação] [FATO]/[INFERÊNCIA]
+- [ação 2]: [o que fazer] — Justificativa: [evidência do débito/gap que motiva esta ação] [FATO]/[INFERÊNCIA]
+
+**[Prioridade Média]**
+- [ação 3]: [o que fazer] — Justificativa: [evidência do débito/gap que motiva esta ação] [FATO]/[INFERÊNCIA]
+- [ação 4]: [o que fazer] — Justificativa: [evidência do débito/gap que motiva esta ação] [FATO]/[INFERÊNCIA]
+
+**[Prioridade Baixa]**
+- [ação 5]: [o que fazer] — Justificativa: [evidência do débito/gap que motiva esta ação] [FATO]/[INFERÊNCIA]
+- [ação 6]: [o que fazer] — Justificativa: [evidência do débito/gap que motiva esta ação] [FATO]/[INFERÊNCIA]
+
+Cada ação do roadmap deve ser acionável, específica e diretamente ligada a uma evidência concreta encontrada neste documento (Débito Técnico, Gap Analysis, Métricas, Testabilidade, Checklist de Segurança).

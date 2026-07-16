@@ -1,0 +1,17 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+
+# PHP
+vendor/
+
+# Ignora arquivos de configuração de ambiente locais
+.env
+.env.local
+.env.*.local

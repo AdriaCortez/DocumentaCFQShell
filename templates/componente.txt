@@ -1,0 +1,61 @@
+{{ANALISE_GLOBAL}}
+
+{{CONTEXTO_GLOBAL}}
+
+=== ARQUIVO A ANALISAR ===
+Caminho: {{CAMINHO_ARQUIVO}}
+Tipo: Componente
+Linguagem: {{LINGUAGEM}}
+Importa de: {{IMPORTS}}
+Exporta: {{EXPORTS}}
+
+{{REFERENCIAS_CRUZADAS}}
+
+Código:
+```{{LINGUAGEM}}
+{{CONTEUDO_ARQUIVO}}
+```
+
+Analise este COMPONENTE e responda EXATAMENTE no formato:
+
+### {{NOME_COMPONENTE}}
+
+**Rota:** [roteamento associado, se houver]
+**Módulo:** [módulo a que pertence]
+**Objetivo Principal:** [propósito detalhado do componente]
+
+#### Metodologia de Levantamento
+- Fonte de evidência: Análise estática do código fonte deste arquivo
+- Comportamento confirmado vs inferido: distinção explícita — trechos inferidos marcados com [A VALIDAR]
+
+#### Propriedades
+- [prop 1]: [tipo e descrição]
+- [prop 2]: [tipo e descrição]
+
+#### Estado Interno
+- [estado 1]: [tipo e propósito]
+
+#### Eventos e Callbacks
+- [evento 1]: [quando dispara e o que faz]
+
+#### Renderização Condicional
+- [condição 1]: [o que renderiza]
+
+#### Regras de Negócio
+Extraia as regras de negócio IMPLEMENTADAS neste componente, com rastreabilidade:
+
+- **RN001** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+
+Se alguma regra parecer divergente do esperado ou tiver comportamento não óbvio, marque com [A VALIDAR] ou [Possível bug/gap].
+
+#### Integrações
+- [dependência externa ou API]
+
+#### Comportamento Visual
+[descrição do comportamento visual e interações]
+
+#### Rastreabilidade de Código
+Para cada funcionalidade principal identificada:
+- Trecho de código: {{CAMINHO_ARQUIVO}}:[linha]
+- Comportamento observado: [descrição]
+- Requisito inferido: [identificador — ex: RF001, RNF001]

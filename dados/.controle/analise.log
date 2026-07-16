@@ -1,0 +1,103 @@
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #5 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_5_1783949033/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+✓ Analise global concluida
+[1/4] Analisando: atividade2/verificarNumeroPrimo.js
+[INFO] Ignorando package-lock.json (biblioteca)
+[INFO] Ignorando package.json (biblioteca)
+[4/4] Analisando: variaveisOperadores.js
+[INFO] Analise do projeto #5 concluida: 2 sucesso(s), 0 erro(s), 2 ignorado(s)
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #6 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_6_1783952083/conteudo/CFQ IA (Cópia)'...
+[INFO] 30 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+✓ Analise global concluida
+[INFO] Ignorando .env (configuracao)
+[2/30] Analisando: apiChat/index.js
+[INFO] Ignorando apiChat/package-lock.json (biblioteca)
+[INFO] Ignorando apiChat/package.json (biblioteca)
+[INFO] Ignorando apiLogin/package-lock.json (biblioteca)
+[INFO] Ignorando apiLogin/package.json (biblioteca)
+[7/30] Analisando: apiLogin/server.js
+[8/30] Analisando: app/alertas/swal.ts
+[9/30] Analisando: app/app.css
+[10/30] Analisando: app/root.tsx
+[11/30] Analisando: app/routes.ts
+[12/30] Analisando: app/routes/index.tsx
+[13/30] Analisando: app/routes/layout/changePasswordForm.tsx
+[14/30] Analisando: app/routes/layout/chatLayout.tsx
+[15/30] Analisando: app/routes/layout/loginForm.tsx
+[16/30] Analisando: app/routes/layout/subscribeForm.tsx
+[17/30] Analisando: app/routes/page/homePage.tsx
+[18/30] Analisando: app/routes/page/profilePage.tsx
+[19/30] Analisando: app/routes/page/startPage.tsx
+[20/30] Analisando: app/routes/services/changePasswordService.tsx
+/home/adriacortez/Área de trabalho/teste_llm/src/analise/analisar_projeto.sh: linha 203: printf: erro de escrita: Pipe quebrado
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #6 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_6_1783952083/conteudo/CFQ IA (Cópia)'...
+[INFO] 10 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+✓ Analise global concluida
+[1/10] Analisando: app/routes/services/chatService.tsx
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #7 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_7_1784033128/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+✓ Analise global concluida
+[1/4] Analisando: atividade2/verificarNumeroPrimo.js
+[INFO] Ignorando package-lock.json (biblioteca)
+[INFO] Ignorando package.json (biblioteca)
+[4/4] Analisando: variaveisOperadores.js
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #8 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_8_1784035808/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #8 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_8_1784035808/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Analise do projeto #7 concluida: 2 sucesso(s), 0 erro(s), 2 ignorado(s)
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #8 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_8_1784035808/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #8 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_8_1784035808/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #8 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_8_1784035808/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+✓ Analise global concluida
+[1/4] Analisando: atividade2/verificarNumeroPrimo.js
+[INFO] Ignorando package-lock.json (biblioteca)
+[INFO] Ignorando package.json (biblioteca)
+⊘ Cache: variaveisOperadores.js
+[INFO] Analise do projeto #8 concluida: 2 sucesso(s), 0 erro(s), 2 ignorado(s)
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #9 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_9_1784124630/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #8 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_8_1784035808/conteudo/atividade1'...
+[INFO] Nenhum arquivo pendente para analisar no projeto.
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #9 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_9_1784124630/conteudo/atividade1'...
+[INFO] 4 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #10 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_10_1784126578/conteudo/atividade1'...
+[INFO] Nenhum arquivo pendente para analisar no projeto.
+✓ Analise global concluida
+✗ Arquivo nao encontrado ou sem permissao: atividade2/verificarNumeroPrimo.js
+✗ Arquivo nao encontrado ou sem permissao: package-lock.json
+✗ Arquivo nao encontrado ou sem permissao: package.json
+✗ Arquivo nao encontrado ou sem permissao: variaveisOperadores.js
+[INFO] Analise do projeto #9 concluida: 0 sucesso(s), 4 erro(s), 0 ignorado(s)
+[INFO] Ollama OK — modelo gemma4:latest disponivel
+[INFO] Analisando projeto #6 em '/home/adriacortez/Área de trabalho/teste_llm/dados/projetos/projeto_6_1783952083/conteudo/CFQ IA (Cópia)'...
+[INFO] 10 arquivo(s) pendente(s) para analise
+[INFO] Executando analise global do projeto...
+[INFO] Poucos arquivos modificados (10 de 30). Usando analise global incremental...

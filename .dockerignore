@@ -1,0 +1,13 @@
+dados/*.db
+dados/.controle/
+.controle/
+dir_teste/
+testes/*
+!testes/
+*.zip
+*.tar
+*.tar.gz
+.git/
+.gitignore
+Dockerfile
+.dockerignore

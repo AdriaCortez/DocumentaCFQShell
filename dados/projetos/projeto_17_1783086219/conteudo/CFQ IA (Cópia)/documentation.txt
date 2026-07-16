@@ -1,0 +1,16 @@
+Lista de itens feitos no terminal e algumas funcionalidades
+
+-> Dia 18 de março de 2026
+
+* O antigo repositório do gitlab foi deletado e atualizado para um novo, de forma que subíssemos um novo gitignore para
+ignorar as pastas de env e de node_modules (substituindo **/node_modules/ por node_modules para que ele ignorasse qualquer um independente
+da pasta);
+* Uma das formas de resolver problemas com git push é definindo o origin com o nome do domínio do site ao invés do IP;
+* Caso ainda esteja dando erro, certifique-se que o projeto não está tendo conflito com uma versão antiga deletada, ou alguma versão que já exista,
+em alguns casos é necessário dar rebase;
+* O rebase pode falhar caso haja arquivos corrompidos ou duplicados, a ultima vez que precisei editar algo pro rebase funcionar era um README antigo que estava sobreescrevendo
+o outro, nesse caso o comando é "nano README.md", depois fazer um git add README.md, e aí um rebase --continue
+* Outro ponto feito foi que, pro repositório ignorar o node_modules das APIs, eles precisavam não só do node_modules, como também que o git parasse definitivamente de ler.
+Então precisei ir nos diretórios de apis e fazer um --cached node_modules e dar um git add . e um git push. Essa foi a forma que encontrei pra não precisar subir o projeto
+todo de novo.
+* Foram necessarios conceder permissões de aplicativo para meu usuário do git funcionar

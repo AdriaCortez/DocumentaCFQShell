@@ -1,0 +1,12 @@
+{"evento":"classificacao","data":{
+  "negocio": 4,
+  "ignorados": 1,
+  "framework": 0,
+  "configuracao": 0,
+  "biblioteca": 1
+}}
+{"evento":"finalizado","data":{
+  "total_analisado": 0,
+  "mensagem": "Todos já analisados anteriormente"
+}}
+{"evento":"finalizado","data":{}}

@@ -1,0 +1,65 @@
+{{ANALISE_GLOBAL}}
+
+{{CONTEXTO_GLOBAL}}
+
+=== ARQUIVO A ANALISAR ===
+Caminho: {{CAMINHO_ARQUIVO}}
+Tipo: Serviço
+Linguagem: {{LINGUAGEM}}
+Importa de: {{IMPORTS}}
+Exporta: {{EXPORTS}}
+
+{{REFERENCIAS_CRUZADAS}}
+
+Código:
+```{{LINGUAGEM}}
+{{CONTEUDO_ARQUIVO}}
+```
+
+Analise este SERVIÇO e responda EXATAMENTE no formato:
+
+### {{NOME_SERVICO}}
+
+**Rota:** [endpoints expostos, se houver]
+**Módulo:** [módulo a que pertence]
+**Objetivo Principal:** [propósito do serviço e responsabilidades]
+
+#### Metodologia de Levantamento
+- Fonte de evidência: Análise estática do código fonte deste arquivo
+- Comportamento confirmado vs inferido: distinção explícita — trechos inferidos marcados com [A VALIDAR]
+
+#### Métodos e Funções
+- [método 1]: [parâmetros e retorno] — [descrição do que faz]
+- [método 2]: [parâmetros e retorno] — [descrição do que faz]
+
+#### Dependências
+- [dependência 1]: [para que serve]
+- [dependência 2]: [para que serve]
+
+#### Regras de Negócio
+Extraia as regras de negócio IMPLEMENTADAS neste serviço, com rastreabilidade:
+
+- **RN001** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+- **RN002** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+
+Se alguma regra parecer divergente do esperado ou tiver comportamento não óbvio, marque com [A VALIDAR] ou [Possível bug/gap].
+
+#### Validações
+**Frontend:** [validações no cliente]
+**Backend:** [validações no servidor]
+
+#### Tratamento de Erros
+- [cenário 1]: [como é tratado]
+- [cenário 2]: [como é tratado]
+
+#### Integrações
+- [API ou banco de dados]
+
+#### Rastreabilidade de Código
+Para cada funcionalidade principal identificada:
+- Trecho de código: {{CAMINHO_ARQUIVO}}:[linha]
+- Comportamento observado: [descrição]
+- Requisito inferido: [identificador — ex: RF001, RNF001]
+
+#### Segurança
+[aspectos de segurança, autenticação, autorização, logging relevantes]

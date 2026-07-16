@@ -1,0 +1,64 @@
+{{ANALISE_GLOBAL}}
+
+{{CONTEXTO_GLOBAL}}
+
+=== ARQUIVO A ANALISAR ===
+Caminho: {{CAMINHO_ARQUIVO}}
+Tipo: {{TIPO_ARQUIVO}}
+Linguagem: {{LINGUAGEM}}
+Importa de: {{IMPORTS}}
+Exporta: {{EXPORTS}}
+
+{{REFERENCIAS_CRUZADAS}}
+
+Código:
+```{{LINGUAGEM}}
+{{CONTEUDO_ARQUIVO}}
+```
+
+Analise este arquivo e responda EXATAMENTE no formato:
+
+### {{NOME_ARQUIVO}}
+
+**Rota:** [caminho de acesso, se aplicável]
+**Módulo:** [nome do módulo a que pertence]
+**Objetivo Principal:** [descrição detalhada do propósito e principais responsabilidades]
+
+#### Metodologia de Levantamento
+- Fonte de evidência: Análise estática do código fonte deste arquivo
+- Comportamento confirmado vs inferido: distinção explícita — trechos inferidos marcados com [A VALIDAR]
+
+#### Estrutura
+- [elemento estrutural 1]: [descrição]
+- [elemento estrutural 2]: [descrição]
+
+#### Funcionalidades
+- [funcionalidade 1]: [descrição]
+- [funcionalidade 2]: [descrição]
+
+#### Regras de Negócio
+Extraia as regras de negócio IMPLEMENTADAS neste arquivo, com rastreabilidade:
+
+- **RN001** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+- **RN002** — Identificada em {{CAMINHO_ARQUIVO}}, linha [N]: [descrição da regra]
+
+Se alguma regra parecer divergente do esperado ou tiver comportamento não óbvio, marque com [A VALIDAR] ou [Possível bug/gap].
+
+#### Validações
+- [validação 1]
+- [validação 2]
+
+#### Tratamento de Erros
+[como o código lida com exceções e erros]
+
+#### Rastreabilidade de Código
+Para cada funcionalidade principal identificada:
+- Trecho de código: {{CAMINHO_ARQUIVO}}:[linha]
+- Comportamento observado: [descrição]
+- Requisito inferido: [identificador — ex: RF001, RNF001]
+
+#### Integrações
+- [dependência externa ou serviço]
+
+#### Segurança e Auditoria
+[aspectos de segurança, autenticação, autorização, logging relevantes]

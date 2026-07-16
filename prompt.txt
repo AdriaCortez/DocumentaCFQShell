@@ -1,0 +1,333 @@
+Opencode, ignore esse texto
+
+----------------------------------------------------------------------------------
+
+Problema: Atualmente, o sistema possui uma construção de global.txt simples e com algumas implementações fazendo falta
+
+Objetivo: Além do que já existe dentro de global.txt e de outos templates, adapte incluindo outras coisas. 
+Seria interessante exigir também as evidências.
+
+Por exemplo:
+
+### Evidências Arquiteturais
+
+Para cada conclusão apresentada, cite as evidências encontradas.
+
+Exemplo:
+
+- O sistema segue arquitetura em camadas porque:
+    - app/routes chamam services
+    - services chamam repositories
+    - repositories acessam banco
+
+- O sistema NÃO segue MVC porque:
+    - controllers acessam diretamente o banco
+    - regras de negócio estão nas rotas
+
+Isso reduz bastante alucinação.
+
+Separaria "Arquitetura" de "Organização"
+
+Hoje elas acabam misturadas.
+
+Exemplo:
+
+Arquitetura:
+- Monolítica
+- MVC
+- Hexagonal
+
+Organização:
+- Feature-based
+- Layer-based
+- Domain-based
+
+São coisas diferentes.
+
+Um projeto pode ser:
+
+Monolítico
+MVC
+Organizado por Features
+
+ou
+
+Monolítico
+Camadas
+Organizado por Domínio
+Adicionaria um inventário de domínio
+
+Algo como
+
+### Modelo de Domínio
+
+Entidades encontradas:
+
+- Usuario
+- Pedido
+- Produto
+
+Relacionamentos:
+
+Usuario
+   |
+   | 1:N
+Pedido
+   |
+   | N:1
+Produto
+
+Isso ajuda muito em documentação funcional.
+
+Adicionaria um inventário de banco
+
+Algo como
+
+### Persistência
+
+Bancos identificados:
+
+- MongoDB
+- PostgreSQL
+
+Coleções/Tabelas:
+
+usuarios
+pedidos
+logs
+
+Relacionamentos encontrados:
+
+...
+
+Hoje isso não aparece.
+
+Dependências entre módulos
+
+Isso costuma ser extremamente útil.
+
+Frontend
+
+Home
+ ↓
+API
+
+API
+ ↓
+Service
+
+Service
+ ↓
+Repository
+
+Repository
+ ↓
+Mongo
+
+Ajuda muito quem vai manter o projeto.
+
+Complexidade
+
+Uma parte que sinto falta:
+
+### Métricas
+
+Arquivos
+
+Quantidade:
+Linhas:
+Componentes:
+Controllers:
+Services:
+Repositories:
+
+Arquivos maiores que 500 linhas
+
+...
+
+Arquivos altamente acoplados
+
+...
+
+Funções acima de 100 linhas
+
+...
+
+Isso é excelente para levantamento técnico.
+
+Cobertura de testes
+
+Outra parte interessante:
+
+### Testabilidade
+
+Testes encontrados
+
+Jest
+Vitest
+Pytest
+
+Cobertura observada
+
+Arquivos sem testes
+
+...
+Segurança
+
+Você fala da ISO 25010, mas faltam verificações específicas.
+
+Por exemplo:
+
+Checklist de Segurança
+
+☐ SQL Injection
+
+☐ NoSQL Injection
+
+☐ XSS
+
+☐ CSRF
+
+☐ CORS
+
+☐ JWT
+
+☐ Cookies HttpOnly
+
+☐ Secure
+
+☐ Rate Limit
+
+☐ Helmet
+
+☐ CSP
+
+☐ Sanitização
+
+☐ Validação
+
+☐ Senhas hasheadas
+
+☐ Logs sensíveis
+
+Esse tipo de checklist é muito útil.
+
+Frontend
+
+Quando houver React/Vue/Angular, eu documentaria também:
+
+### Estrutura da Interface
+
+"Rotas
+
+Componentes
+
+Hooks
+
+Contextos
+
+Stores
+
+Estado Global
+
+Fluxo de navegação
+
+Lazy loading
+
+Layouts
+Backend
+
+Também faria um inventário específico:
+
+### Estrutura da API
+
+Controllers
+
+Middlewares
+
+Services
+
+Repositories
+
+Models
+
+Validações
+
+DTOs
+
+Autenticação
+
+Autorização
+
+Jobs
+
+Cron
+
+Filas
+
+WebSockets"
+Precisaria diferenciar fato de inferência em todo o documento
+
+Hoje isso aparece apenas no final.
+
+Eu faria isso em todas as seções.
+
+Por exemplo:
+
+"Controller chama Service.
+[FATO]
+
+Service parece seguir padrão Repository.
+[A VALIDAR]
+
+Provavelmente utiliza Clean Architecture.
+[INFERÊNCIA]"
+
+Isso aumenta bastante a confiabilidade da documentação.
+A única parte que eu removeria
+
+Esta:
+
+Papel de Cada Arquivo
+
+Em projetos grandes isso explode.
+
+Imagine um projeto com:
+
+2.300 arquivos
+
+Você vai gerar milhares de linhas.
+
+Melhor seria:
+
+Descreva apenas arquivos relevantes:
+
+- Controllers
+- Services
+- Models
+- Rotas
+- Componentes principais
+- Configurações
+- Entrypoints
+
+Ou limitar explicitamente:
+
+"Documente apenas arquivos que participam diretamente dos fluxos principais ou da arquitetura."
+
+Restrições: 
+
+Impactos técnicos: 
+
+Fluxo: 
+
+Critério de aceite:
+
+Riscos:
+
+Bugs a serem corrigidos:
+
+"Undefined arquivos serão analisados" ao clicar em "re-analisar arquivo -> a re-análise nunca começa,
+processos orfãos -> socat envia SIGPIPE que propaga para o processo nohup, pausando a análise,
+análise global regenerada mesmo com cache parcial -> QUando há 1+ cache miss, a global é regenerada inteira 
+política de limpeza de cache - Análises antigas nunca são deletadas do banco de dados, fazendo-o crescer indefinidamente, mesmo ao clicar em "excluir" no front end.
+------------------------------------------------------------------------------------- 
